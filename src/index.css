@@ -1,0 +1,8 @@
+body {
+    font-family: "roboto condensed" sans-serif;
+}
+
+:root {
+    --primary-white: #fff;
+    --primary-orange: #f9ab00;
+}

@@ -1,0 +1,40 @@
+.logo {
+    width: 70px;
+    height: 70px;
+}
+
+nav a.nav-link {
+    letter-spacing: 0.03;
+    cursor: pointer;
+}
+
+nav ul li {
+    text-transform: uppercase;
+}
+
+.navbar-nav li a {
+    color: var(--primary-white) !important;
+    margin-right: 0.55rem;
+    margin-left: 0.55rem;
+    position: relative;
+}
+
+.navbar-brand {
+    max-width: 17.25rem;
+    padding: 0;
+}
+
+.navbar-nav li a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-orange);
+    transition: width .5s ease-in-out;
+}
+
+.navbar-nav li a:hover:after {
+    width: 100%;
+}

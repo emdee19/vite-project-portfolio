@@ -1,14 +1,17 @@
 import React from "react";
 import "./navbar.css";
 import { Link } from "react-router-dom";
+import logo from "../../assets/images/logo.jpg"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = (props) => {
   return (
     <>
         <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
-            <div className="container-fluid">
+            <div className="container">
                 <Link className="navbar-brand" to="/">
-                    Navbar
+                    <img className="logo" src={logo} alt="logo" />
                 </Link>
                 <button
                 className="navbar-toggler"
@@ -19,37 +22,37 @@ const Navbar = (props) => {
                 aria-expanded="false"
                 aria-label="Toggle navigation"
                 >
-                    <span className="navbar-toggler-icon"></span>
+                    <FontAwesomeIcon icon={ faBars } style={{ color: "#fff" }} />
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNav">
                     <ul className="navbar-nav ms-auto">
                         <li className="nav-item">
-                            <Link className="nav-link active" aria-current="page" to="#home">
+                            <Link className="nav-link" aria-current="page" to="/">
                                 {props.home}
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link active" to="/about">
+                            <Link className="nav-link" to="/about">
                                 {props.about} 
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link active" to="/services">
+                            <Link className="nav-link" to="/services">
                                 {props.services}
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link active" to="/experience">
+                            <Link className="nav-link" to="/experience">
                                 {props.experience}
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link active" to="portfolio">
+                            <Link className="nav-link" to="portfolio">
                                 {props.portfolio}
                             </Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link active" to="/contact">
+                            <Link className="nav-link" to="/contact">
                                 {props.contact}
                             </Link>
                         </li>
